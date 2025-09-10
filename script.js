@@ -1,0 +1,1 @@
+document.getElementById("flashcard").innerHTML = "<h2> No </h2>";
