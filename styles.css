@@ -1,11 +1,11 @@
 /*
- colors:
- rgb(33, 26, 29)
+colors:
+rgb(33, 26, 29)
 rgb(124, 9, 38);
 rgb(237, 31, 51)
- rgb(255, 117, 117)
+rgb(255, 117, 117)
 rgb(247, 246, 235)
- rgb(214,212,203)
+rgb(214,212,203)
 */
 
 body {
@@ -14,19 +14,19 @@ body {
     color: rgb(33, 26, 29);
     padding: 0px;
     margin: 0px;
- }
+}
 
  header {
-     background: rgb(214,212,203);
+    background: rgb(214,212,203);
     padding: 20px;
-     color:rgb(237, 31, 51);
- }
+    color:rgb(237, 31, 51);
+}
 
  h1 {
     font-size: 50px;
     margin: 0px;
     padding: 0px;
- }
+}
 
 section {
     padding: 20px;
@@ -39,7 +39,7 @@ section {
 }
             
 .button {
-     background: rgb(237, 31, 51);
+    background: rgb(237, 31, 51);
     border-radius: 10px;
     border: none;
     font-size: 25px;
@@ -51,43 +51,43 @@ section {
 
 .button:hover {
     background: rgb(255, 117, 117);
- }
+}
 
- .button span {
+.button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
     color: rgb(124, 9, 38);
- }
+}
 
 .button span:after {
     content: '»';
     position: absolute;
-     opacity: 0;
+    opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
     color: rgb(237, 31, 51);
- }
+}
 
 .button:hover span {
     padding-right: 25px;
     color: rgb(237, 31, 51);
- }
+}
 
 .button:hover span:after {
     opacity: 1;
     right: 0;
- }
+}
 
- .button-link {
+.button-link {
     display: inline-block;
     background: rgb(237, 31, 51);
     border-radius: 10px;
     border: none;
     font-size: 20px; 
-   font-weight: bold;
+    font-weight: bold;
     color: rgb(124, 9, 38);
     padding: 30px 40px;
     cursor: pointer;
@@ -97,10 +97,10 @@ section {
     font-size: 25px;
 }
 
- .button-link:hover {
+.button-link:hover {
     background: rgb(255, 117, 117);
     color: rgb(237, 31, 51);
- }
+}
 
 .button-link span {
     cursor: pointer;
@@ -108,9 +108,9 @@ section {
     position: relative;
     transition: 0.5s;
     color: inherit;
- }
+}
 
-  .button-link span:after {
+.button-link span:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -145,25 +145,174 @@ a {
     text-decoration: none;
     color: rgb(237, 31, 51);
     transition-duration: 0.25s;
+}
 
- }
-
- a:hover {
+a:hover {
     color: rgb(255, 117, 117);
-    }
+}
 
-#flashcard {
+.flashcard-container {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.view {
     display: inline-block;
-    background: rgb(237, 31, 51);
+    background: rgb(247, 246, 235);
+    color: rgb(33, 26, 29);
     border-radius: 10px;
     border: none;
     font-size: 20px; 
-   font-weight: bold;
-    color: rgb(124, 9, 38);
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    position: relative;
+    font-size: 25px;
+}
+
+.view:hover {
+    background: rgb(214,212,203);
+    color: rgb(237, 31, 51);
+}
+
+.view span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: inherit;
+}
+
+.view span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    color: rgb(237, 31, 51);
+}
+
+.view:hover span {
+    padding-right: 25px;
+}
+
+.view:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#flashcard {
+    display: inline-block;
+    background: rgb(214,212,203);
+    border-radius: 10px;
+    border: none;
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(33, 26, 29);
     padding: 30px 40px;
     cursor: pointer;
     transition-duration: 0.5s;
     text-decoration: none;
     position: relative;
     font-size: 25px;
+}
+
+#next {
+    display: inline-block;
+    background: rgb(214,212,203);
+    border-radius: 10px;
+    border: none;
+    font-size: 15px; 
+    font-weight: bold;
+    color: rgb(33, 26, 29);
+    padding: 20px 30px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+}
+
+#mastery-controls {
+    display: none;
+}
+
+.mastery-button {
+    background: rgb(214, 212, 203);
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(33, 26, 29);
+    padding: 15px 25px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.mastery-button:hover {
+    background: rgb(255, 117, 117);
+}
+
+#flashcardDisplayQuestion {
+    background: rgb(247, 246, 235);
+    padding: 20px 20px;
+    color:rgb(33, 26, 29);
+}
+
+.card-entry {
+    background: rgb(247, 246, 235);
+    color: rgb(33, 26, 29);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+#flashcardContainer {
+    background: rgb(214, 212, 203);
+    color: rgb(33, 26, 29);
+    padding: 20px;
+    display: none;
+}
+
+.flashcard-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 2px solid rgb(180, 178, 170);
+}
+
+.flashcard-header {
+    font-weight: bold;
+    background: rgb(200, 198, 190);
+}
+
+.mastery-bar {
+    width: 100%;
+    height: 14px;
+    background: rgb(180, 178, 170);
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.mastery-fill {
+    height: 100%;
+    background: rgb(237, 31, 51);
+    border-radius: 7px;
+    transition: width 0.3s;
+}
+
+.mastery-display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mastery-display .mastery-bar {
+    flex: 1;
 }

@@ -1,0 +1,63 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> example </title>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="../script.js" defer></script>
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">home</a></li>
+                    <li><a href="../about.html">about</a></li>
+                    <li><a href="../contact.html">contact</a></li>
+                </ul>
+            </nav>
+            <h1>example</h1>
+        </header>
+
+        <section>
+            <button class="view">
+                <span>view flashcards...</span>
+            </button>
+        </section>
+
+        <div id="flashcardContainer">
+            <div class="flashcard-row flashcard-header">
+                <div>Question</div>
+                <div>Answer</div>
+                <div>Type</div>
+                <div>Mastery</div>
+            </div>
+
+    <div id="flashcardList"></div>
+</div>
+        </div>
+        <section>
+            <div class="flashcard-container">
+                <button id="flashcard">
+                    click next
+                </button>
+
+                <br><br>
+
+                <div id="mastery-controls">
+                    <button class="mastery-button" data-mastery="1">1 - don't know it</button>
+                    <button class="mastery-button" data-mastery="2">2</button>
+                    <button class="mastery-button" data-mastery="3">3</button>
+                    <button class="mastery-button" data-mastery="4">4</button>
+                    <button class="mastery-button" data-mastery="5">5 - know it well</button>
+                </div>
+
+                <br><br>
+
+                <button id="next">
+                    next card
+                </button>
+            </div>
+        </section>
+    </body>
+</html>
