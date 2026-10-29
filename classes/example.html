@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> example </title>
         <link rel="stylesheet" href="../styles.css">
-        <script src="../script.js" defer></script>
+        <script src="../storage.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
 
@@ -16,25 +17,79 @@
                     <li><a href="../contact.html">contact</a></li>
                 </ul>
             </nav>
-            <h1>example</h1>
+            <h1 id="classTitle">Loading</h1>
+
+            <button id="deleteClassButton" type="button">
+                Delete Class
+            </button>
+
+            <button id="addFlashcardButton" type="button">
+                    Add Flashcard
+            </button>
+
+            <dialog id="addFlashcardDialog">
+                <form id="addFlashcardForm">
+                    <label for="questionInput">Question:</label>
+                    <input
+                        type="text"
+                        id="questionInput"
+                        required
+                    >
+
+                    <label for="answerInput">Answer:</label>
+                    <input
+                        type="text"
+                        id="answerInput"
+                        required
+                    >
+
+                    <label for="typeInput">Card type:</label>
+                    <select id="typeInput">
+                        <option value="flashcard">Flashcard</option>
+                        <option value="multiple choice">Multiple Choice</option>
+                    </select>
+
+                    <div id="choicesInputContainer" style="display: none;">
+
+                        <label for="choice1">Choice 1:</label>
+                        <input type="text" id="choice1">
+
+                        <label for="choice2">Choice 2:</label>
+                        <input type="text" id="choice2">
+
+                        <label for="choice3">Choice 3:</label>
+                        <input type="text" id="choice3">
+
+                        <label for="choice4">Choice 4:</label>
+                        <input type="text" id="choice4">
+                    </div>
+
+                    <button type="submit">Save Flashcard</button>
+                    <button type="button" id="cancelFlashcardButton">
+                        Cancel
+                    </button>
+                </form>
+            </dialog>
+
         </header>
 
-        <section>
-            <button class="view">
-                <span>view flashcards...</span>
-            </button>
-        </section>
+            <section>
+                <button class="view">
+                    <span>view flashcards...</span>
+                </button>
+            </section>
 
-        <div id="flashcardContainer">
-            <div class="flashcard-row flashcard-header">
-                <div>Question</div>
-                <div>Answer</div>
-                <div>Type</div>
-                <div>Mastery</div>
+            <div id="flashcardContainer">
+                <div class="flashcard-row flashcard-header">
+                    <div>Question</div>
+                    <div>Answer</div>
+                    <div>Type</div>
+                    <div>Mastery</div>
+                    <div>Actions</div>
+                </div>
+
+                <div id="flashcardList"></div>
             </div>
-
-    <div id="flashcardList"></div>
-</div>
         </div>
         <section>
             <div class="flashcard-container">
@@ -42,7 +97,10 @@
                     click next
                 </button>
 
-                <br><br>
+                <div id="choices">
+                </div>
+                <div id="feedback">
+                </div>
 
                 <div id="mastery-controls">
                     <button class="mastery-button" data-mastery="1">1 - don't know it</button>

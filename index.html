@@ -5,7 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> calculated </title>
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script> 
+        <script src="storage.js" defer></script>
+        <script src="home.js" defer></script> 
+
     </head>
     <body>
 
@@ -17,12 +19,33 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </nav>
-            <h1>calculated</h1>
+            <h1>
+                calculated
+            </h1>
         </header>
 
-<section>
-    <a href="classes/example.html" class="button-link"><span>example</span></a>
-</section>
+    <section>
+        <h2>Your classes</h2>
+        <button id="createClassButton" class="button-link">
+            Create class
+        </button> <br> <br>
+        <div id="classList"></div>
+    </section>
+
+    <dialog id="createClassDialog">
+        <form id="createClassForm">
+            <label for="className">Class name:</label>
+            <input
+                type="text"
+                id="className"
+                placeholder="e.g. Calculus II"
+                required
+            >
+
+            <button type="submit">Create</button>
+            <button type="button" id="cancelCreate">Cancel</button>
+        </form>
+    </dialog>
 
     </body>
 </html>
